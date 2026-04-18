@@ -12,10 +12,14 @@ import '../modules/dashboard/bindings.dart';
 import '../modules/dashboard/view.dart';
 import '../modules/daily_entry/bindings.dart';
 import '../modules/daily_entry/view.dart';
+import '../modules/entries/bindings.dart';
+import '../modules/entries/view.dart';
 import '../modules/open_account/bindings.dart';
 import '../modules/open_account/view.dart';
 import '../modules/reports/bindings.dart';
 import '../modules/reports/view.dart';
+import '../modules/settings/bindings.dart';
+import '../modules/settings/view.dart';
 import 'app_routes.dart';
 
 class AppPages {
@@ -24,6 +28,11 @@ class AppPages {
       name: AppRoutes.dashboard,
       page: DashboardView.new,
       binding: DashboardBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.entries,
+      page: EntriesView.new,
+      binding: EntriesBinding(),
     ),
     GetPage(
       name: AppRoutes.openAccount,
@@ -59,6 +68,11 @@ class AppPages {
       name: AppRoutes.closeAccount,
       page: ClosedAccountsView.new,
       binding: ClosedAccountsBinding(showCloseFlow: true),
+    ),
+    GetPage(
+      name: AppRoutes.settings,
+      page: SettingsView.new,
+      binding: SettingsBinding(),
     ),
     GetPage(
       name: AppRoutes.confirmation,

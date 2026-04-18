@@ -14,15 +14,14 @@ class DashboardController extends GetxController {
   final AccountRepository repository = Get.find<AccountRepository>();
   final AppSettingsService settingsService = Get.find<AppSettingsService>();
 
-  final currentTabIndex = 0.obs;
   final entrySearch = ''.obs;
   final accountSearch = ''.obs;
   final appName = AppConstants.appDisplayName.obs;
   final appVersion = 'Loading...'.obs;
+  final welcomeUserName = 'User'.obs;
   final isImportingCsv = false.obs;
   final isDownloadingReport = false.obs;
   final isTakingBackup = false.obs;
-  final accountsTabInitialIndex = 0.obs;
 
   final entriesSearchController = TextEditingController();
   final accountSearchController = TextEditingController();
@@ -33,16 +32,19 @@ class DashboardController extends GetxController {
     _loadAppVersion();
   }
 
-  void changeTab(int index) {
-    currentTabIndex.value = index;
-    if (index == 4) {
-      _loadAppInfo();
-    }
-  }
-
   void openAccount() => Get.toNamed(AppRoutes.openAccount);
 
   void openDailyEntry() => Get.toNamed(AppRoutes.dailyEntry);
+
+  void openEntries() => Get.toNamed(AppRoutes.entries);
+
+  void openReports() => Get.toNamed(AppRoutes.reports);
+
+  void openAccounts() => Get.toNamed(AppRoutes.accountList);
+
+  void openClosedAccounts() => Get.toNamed(AppRoutes.closedAccounts);
+
+  void openSettings() => Get.toNamed(AppRoutes.settings);
 
   void openCloseFlow() => Get.toNamed(AppRoutes.closeAccount);
 
@@ -50,24 +52,17 @@ class DashboardController extends GetxController {
     Get.toNamed(AppRoutes.accountDetails, arguments: accountNumber);
   }
 
-  void goToAccountsTab() {
-    accountsTabInitialIndex.value = 0;
-    changeTab(2);
-  }
+  void goToAccountsTab() => openAccounts();
 
   void goToExistingAccountsPage() => Get.toNamed(AppRoutes.accountList);
 
-  void goToActiveAccountsTab() {
-    accountsTabInitialIndex.value = 0;
-    changeTab(2);
-  }
+  void goToActiveAccountsTab() => openAccounts();
 
-  void goToClosedAccountsTab() {
-    accountsTabInitialIndex.value = 1;
-    changeTab(2);
-  }
+  void goToClosedAccountsTab() => openClosedAccounts();
 
-  void goToEntriesTab() => changeTab(1);
+  void goToEntriesTab() => openEntries();
+
+  void goToReportsTab() => openReports();
 
   List<AccountModel> get recentAccounts => repository.getRecentAccounts(limit: 5);
 
