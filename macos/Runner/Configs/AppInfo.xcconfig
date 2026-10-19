@@ -5,10 +5,10 @@
 // 'flutter create' template.
 
 // The application's name. By default this is also the title of the Flutter window.
-PRODUCT_NAME = entry_book
+PRODUCT_NAME = Daily Collection
 
 // The application's bundle identifier
-PRODUCT_BUNDLE_IDENTIFIER = com.ketan.entryBook
+PRODUCT_BUNDLE_IDENTIFIER = com.krdlabs.daily-collection
 
 // The copyright displayed in application information
 PRODUCT_COPYRIGHT = Copyright © 2026 com.ketan. All rights reserved.

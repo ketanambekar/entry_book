@@ -1,4 +1,4 @@
-package com.example.entry_book
+package com.krdlabs.daily_collection
 
 import io.flutter.embedding.android.FlutterActivity
 

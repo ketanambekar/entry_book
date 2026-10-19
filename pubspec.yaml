@@ -1,8 +1,8 @@
 name: entry_book
-description: "Entry Book app."
+description: "Daily Collection app."
 publish_to: 'none'
 
-version: 1.0.6+1
+version: 1.0.42+1
 
 environment:
   sdk: ^3.12.1
@@ -11,11 +11,13 @@ dependencies:
   flutter:
     sdk: flutter
 
-  cupertino_icons: ^1.0.8
+  cupertino_icons: ^2.0.0
   get: ^4.7.3
   get_storage: ^2.1.1
   entry_ui:
     path: ../entry_ui
+  package_info_plus: ^10.2.2
+  image_picker: ^1.2.4
 
 dev_dependencies:
   flutter_test:
