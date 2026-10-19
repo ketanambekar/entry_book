@@ -1,0 +1,27 @@
+name: entry_book
+description: "Entry Book app."
+publish_to: 'none'
+
+version: 1.0.5+1
+
+environment:
+  sdk: ^3.12.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  get: ^4.7.3
+  get_storage: ^2.1.1
+  entry_ui:
+    path: ../entry_ui
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true

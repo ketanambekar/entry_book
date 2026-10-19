@@ -1,0 +1,19 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Bump version",
+      "type": "shell",
+      "command": "dart run tool/bump_version.dart",
+      "presentation": { "reveal": "silent" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Bump version (release)",
+      "type": "shell",
+      "command": "dart run tool/bump_version.dart --release",
+      "presentation": { "reveal": "silent" },
+      "problemMatcher": []
+    }
+  ]
+}
